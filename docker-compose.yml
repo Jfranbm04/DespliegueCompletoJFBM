@@ -43,7 +43,7 @@ services:
       MYSQL_USER: alumnoDAW
       MYSQL_PASSWORD: passJFBM
     volumes:
-      - ./database/jfbm_bd.sql:/docker-entrypoint-jfbm_bd.sql.d/jfbm_bd.sql
+      - ./database/jfbm_bd.sql:/docker-entrypoint-initdb.d/init.sql
       - database_data:/var/lib/mysql
     networks:
       - app-network
